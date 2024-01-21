@@ -30,6 +30,7 @@ export default function SplitBillForm({
         setBillValue(+bill);
     }
     function handleMyExpenseChange(expense: string) {
+        if (+expense > billValue) return;
         setMyExpense(+expense);
     }
 
@@ -58,7 +59,7 @@ export default function SplitBillForm({
             >
                 Your expense
             </Input>
-            <Input value={`${friendExpense}`} type="number" readonly>
+            <Input value={`${friendExpense}`} type="number" disabled>
                 {friend.name}'s Expense
             </Input>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>

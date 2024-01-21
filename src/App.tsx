@@ -45,7 +45,7 @@ function App() {
         setFriendList((currArr) => {
             return currArr.map((friend) => {
                 if (friend.id === selectedFriend) {
-                    return { ...friend, balance: num };
+                    return { ...friend, balance: friend.balance + num };
                 }
                 return friend;
             });

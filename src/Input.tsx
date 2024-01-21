@@ -5,7 +5,7 @@ export interface InputProps {
     type: string;
     value: string;
     onChange?: (s: string) => void;
-    readonly?: boolean;
+    disabled?: boolean;
 }
 
 export function Input({
@@ -13,7 +13,7 @@ export function Input({
     type,
     value,
     onChange,
-    readonly,
+    disabled,
 }: InputProps) {
     const style: CSSProperties = {
         display: 'flex',
@@ -32,7 +32,7 @@ export function Input({
                 type={type}
                 value={value}
                 onChange={handleChange}
-                readOnly={readonly}
+                disabled={disabled}
             />
         </div>
     );
