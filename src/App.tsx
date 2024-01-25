@@ -63,6 +63,7 @@ function App() {
             />
             {selectedFriend !== -1 && friendForForm && (
                 <SplitBillForm
+                    key={selectedFriend}
                     friend={friendForForm}
                     onSubmit={handleSplitFormSubmit}
                 />
